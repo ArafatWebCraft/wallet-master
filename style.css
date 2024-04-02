@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+img{
+    width: 100%;
+}
+.how-its-work:hover .sub-menu{
+    transform: translateY(15px);
+    visibility: visible;
+} 
+.sub-menu{
+    transform: translateY(-15px);
+    transition: transform 1s;
+    visibility: hidden;
+}
+.resource:hover .resource-menu{
+    transform: translateY(30px);
+    visibility: visible;
+}
+.resource-menu{
+    transform: translateY(-20px);
+    transition: transform 1s;
+    visibility: hidden;
+}
+.support:hover .support-menu{
+    transform: translateY(15px);
+    visibility: visible;
+}
+.support-menu{
+    transform: translateY(-20px);
+    transition: transform 1s;
+    visibility: hidden;
+}
+@media only screen and (max-width: 1024px) {
+    .sub-menu{
+        transform: translateY(0px);
+        background-color: white;
+        visibility: visible;
+    }
+    .resource-menu{
+        transform: translateY(0px);
+        background-color: white;
+        visibility: visible;
+    }
+}
+.sign-up a { 
+    transition: background-color 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    color: #000; /* Set default text color */
+}
+
+/* CSS for hover effect */
+.sign-up a:hover {
+    background-color: #EDB7A4; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* CSS to change background of second anchor on hover of first anchor */
+.sign-up a:hover + a {
+    background-color: #D0EDA4; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+}
+
+/* Additional CSS for the second anchor tag */
+.sign-up a:last-child {
+    background-color: #F4A261; /* Set initial background color */
+    color: #000; /* Set initial text color */
+}
+.use_cases > h1{
+    position: relative;
+}
+.use_cases > h1::after{
+    content: "";
+    position: absolute;
+    top: 106%;
+    left: 43%;
+    width: 7rem;
+    height: 5px;
+    background-color:rgb(252 248 238 / var(--tw-bg-opacity));
+    text-align: center;
+    border-radius: 3px;
+}
+.budgeting{
+    /* background: rgb(34,193,195);
+background: linear-gradient(140deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+/* background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%); */
+/* background: rgb(223,199,35);
+background: linear-gradient(90deg, rgba(223,199,35,1) 3%, rgba(223,141,35,1) 43%, rgba(227,167,89,1) 56%, rgba(219,145,32,1) 67%, rgba(191,118,54,1) 77%, rgba(224,214,165,1) 100%);s */
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.why-before{
+    position: relative;
+}
+.why-before::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #354fd8;
+    width: 24px;
+    height: 24px;
+    top: -18px;
+}
+.why-before::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    background-color: #354fd8;
+    width: 24px;
+    height: 24px;
+    top: -18px;
+}

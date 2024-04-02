@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet-Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/28a80c0308.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="bg-[white] nav-header relative sticky z-[99999] top-0 left-0 right-0 shadow-lg lg:shadow-lg">
+        <div
+            class="header mx-auto container px-3  lg:px-[2rem] static flex flex-col justify-evenly lg:flex-row py-4 lg:items-center">
+            <div class="logo">
+                <a href="#">
+                    <h2 class="text-[1.5em] tracking-[0.1em]">Wallet-Master</h2>
+                </a>
+            </div>
+            <div class="menu absolute top-[-45.6em]  lg:static bg-[white] px-5 py-5 lg:px-0 lg:py-0 left-0 right-0">
+                <ul class="flex gap-6 lg:flex-row flex-col">
+                    <li class="lg:relative how-its-work"><a class="text-[1.1em] py-6" href="#">How
+                            it works</a>
+                        <span class=""><i class="fa-solid fa-angle-down"></i></span>
+                        <div
+                            class="sub-menu lg:absolute static lg:rounded flex lg:bg-[white] lg:w-[24rem] container lg:px-6 lg:py-5 mt-3 lg:mt-0 lg:shadow ">
+                            <div class="wallet-work flex-1 text-[0.9rem]">
+                                <div class="work-logo flex mb-3 items-center">
+                                    <a class="mr-3" href="#">
+                                        <img class="w-[1.5em]" src="image/wallet.png" alt="wallet-image">
+                                    </a>
+                                    <h2 class="font-bold ">What is Wallet</h2>
+                                </div>
+                                <div class="wallet-list text-[1.1em] text-slate-800 leading-9">
+                                    <ul class="">
+                                        <li><a href="#">Budgets</a></li>
+                                        <li><a href="#">Expense tracking</a></li>
+                                        <li><a href="#">Planned Payments</a></li>
+                                        <li><a href="#">Cash Flow insights</a></li>
+                                        <li><a href="#">Bank sync</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="wallet-start flex-1">
+                                <div class="wallet-logo flex mb-3 items-center">
+                                    <a class="mr-3" href="#">
+                                        <img class="w-[1.5em]" src="image/shuttle.png" alt="shuttl">
+                                    </a>
+                                    <h2 class="font-bold ">how it works</h2>
+                                </div>
+                                <div class="wallet-list">
+                                    <ul class=" text-slate-800 leading-9">
+                                        <li><a href="#">First day</a></li>
+                                        <li><a href="#">First week</a></li>
+                                        <li><a href="#">First month</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative resource lg:text-[1.1em] font-bold lg:font-normal"><a class="py-6"
+                            href="#">Resources</a>
+                        <span><i class="fa-solid fa-angle-down"></i></span>
+                        <ul
+                            class="lg:absolute static resource-menu bg-[white] w-[15em] lg:px-6 lg:py-4 leading-9 lg:shadow rounded font-normal lg:top-0">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Bank to sync</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </li>
+                    <li class="support relative text-[1.1em] font-bold lg:font-normal"><a href="#">Support</a>
+                        <ul
+                            class="support-menu absolute bg-[white] shadow-lg rounded font-normal w-[10em] px-6 py-4 text-center">
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </li>
+                    <li class="text-[1.1em]"><a class="px-4 py-3 text-center bg-[white] shadow-lg rounded-full"
+                            href="#">For
+                            Business</a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="sign-up absolute lg:static hidden lg:block  right-3 lg:right-0 top-6 lg:top-0 bottom-0 list-group-item-dark lg:static">
+                <a class="mr-2 px-5 py-3  border border-current hover:bg-[#EDB7A4] hover:text-white transition-colors shadow-lg rounded-full"
+                    href="#">Sign
+                    up</a>
+                <a class="px-5 py-3 bg-[#F4A261] hover:bg-[#D0EDA4] hover:text-black transition-colors text-slate-50 shadow-lg rounded-full"
+                    href="#">Login</a>
+            </div>
+            <span class="absolute right-3 top-[33%]"><ion-icon onclick="onTogglemenu(this)"
+                    class="text-2xl items flex lg:hidden" name="menu"></ion-icon></span>
+        </div>
+    </header>
+    <section class="w-full bg-[#F9FAF5]">
+        <div class="slide bg-[#F9FAF5]">
+            <div class="container lg:px-[8.5rem] justify-between gap-5 mx-auto lg:flex lg:flex-row">
+                <div
+                    class="slide-text flex-1 lg:mt-[4rem] align-middle lg:text-left text-center  tracking-[0.1em]  aligns-center px-3 py-3 ">
+                    <h3 class="mb-5 mt-[2em] lg:mt-[0em] text-xl lg:flex">
+                        <img style="max-width: 50px;" class=" mx-auto mb-7 lg:mb-0 lg:mx-0 lg:mr-3"
+                            src="image/wallet.png" alt="">
+                        <div class="wallet-text">
+                            <h3 class="text-[1.4em] font-semibold">Wallet</h3>
+                            <p class="text-[0.9em] text-slate-600">by Budgetbakers</p>
+                        </div>
+                    </h3>
+                    <h1 class="mb-5 text-[2.9em]  lg:pr-10 font-semibold">
+                        <span class="mb-5">Your Finances in One Place</span>
+                    </h1>
+                    <p class="mb-5 text-base lg:flex gap-1 lg:mt-12 lg:mx-[0em] mx-[3em]">
+                        <a class="mx-auto lg:mx-0" href="#">
+                            <img class="mx-auto lg:mx-0 mb-7 lg:mb-0" style="max-width: 145px;"
+                                src="image/google-play.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="mx-auto lg:mx-0 mb-7 lg:mb-0" style="max-width: 140px;"
+                                src="image/app-store.svg" alt="">
+                        </a>
+                    </p>
+                    <div class="contact-now mx-auto lg:mx-0 mb-3 w-[9rem] lg:mr-3 relative">
+                        <div
+                            class="contact w-25  relative tracking-[0.1em] z-1   pr-[1rem] lg:pr-[0.9rem] bg-[#F4A261] text-white py-2 px-5 text-center rounded ">
+                            <h2>Try Web App</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-image lg:mt-[2.9rem] lg:mb-[1rem] flex-1  ">
+                    <div class="image lg:w-[100%]">
+                        <img style="max-width: 500px;" src="image/main_img-3-1437x1536.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#FCF8EE]">
+        <div
+            class="rating grid  grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 grid-cols-1 gap-10 container mx-auto lg:w-[1000px] py-[4rem] ">
+            <div class="leading-8 mx-auto lg:mx-0">
+                <h1 class="text-[3.2rem] font-semibold text-[#0D181C] mb-8">6.6 M</h1>
+                <div class="flex gap-3 text-[1.7rem]">
+                    <span class="text-[#E76F51]"><i class="fa-solid fa-cloud-arrow-down"></i></span>
+                    <h2 class="text-[#5F6061]">Downloads</h2>
+                </div>
+            </div>
+            <div class="leading-8 mx-auto lg:mx-0">
+                <h1 class="text-[3.2rem] font-semibold text-[#0D181C] mb-8">4.7 M</h1>
+                <div class="flex gap-3 text-[1.7rem]">
+                    <span class="text-[#E76F51]"><i class="fa-solid fa-star"></i></span>
+                    <h2 class="text-[#5F6061]">Rating</h2>
+                </div>
+            </div>
+            <div class="leading-8 mx-auto lg:mx-0">
+                <h1 class="text-[3.2rem] font-semibold text-[#0D181C] mb-8">20+</h1>
+                <div class="flex gap-3 text-[1.7rem]">
+                    <span class="text-[#E76F51]"><i class="fa-solid fa-globe"></i></span>
+                    <h2 class="text-[#5F6061]">Languages</h2>
+                </div>
+            </div>
+            <div class="leading-8 mx-auto lg:mx-0">
+                <h1 class="text-[3.2rem] font-semibold text-[#0D181C] mb-8">15 K</h1>
+                <div class="flex gap-3 text-[1.7rem]">
+                    <span class="text-[#E76F51]"><i class="fa-solid fa-landmark"></i></span>
+                    <h2 class="text-[#5F6061]">Banks Connect
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[white]">
+        <div class="use_cases lg:w-[1050px] px-3 container mx-auto py-[3rem]">
+            <h1 class="text-center text-[2.5rem] font-semibold">
+                Use
+                Cases
+            </h1>
+            <div class="content grid lg:grid-cols-3  lg:gap-4 lg:grid-rows-1">
+                <div class="mt-12 budgeting mx-auto shadow col-span-1  text-left py-4 px-6 rounded">
+                    <h1 class="text-[2.4rem] text-white mb-4">Budgeting
+                    </h1>
+                    <p class="mb-6 text-[1.2rem] text-white">Set unlimited daily, weekly, monthly, or one-time
+                        budgets</p>
+                </div>
+                <div style="background-color: #8BC6EC;
+                background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+                " class="mt-12 mx-auto shadow col-span-1 text-left py-4 px-6 rounded">
+                    <h1 class="text-[2.4rem] text-white mb-4">Expense
+                        control
+                    </h1>
+                    <p class="mb-6 text-[1.2rem] text-white">Set unlimited daily, weekly, monthly, or one-time budgets
+                    </p>
+                </div>
+                <div style="background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);"
+                    class="mt-12 mx-auto shadow col-span-1 text-left py-4 px-6 rounded">
+                    <h1 class="text-[2.4rem] text-white mb-4">Planning
+
+                    </h1>
+                    <p class="mb-6 text-[1.2rem] text-white">Set unlimited daily, weekly, monthly, or one-time budgets
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="bg-[white]">
+        <div class="why-wallet container mx-auto px-4 py-8 lg:pb-[5rem] lg:px-[7rem]">
+            <h1 class="text-center mb-8 pt-5 pb-6 text-[3rem] font-semibold">Why Wallet?</h1>
+            <div
+                class="container grid grid-col-1  gap-[2rem]  mx-auto grid-rows-3 lg:grid-cols-3  lg:gap-4 lg:grid-rows-1">
+                <div class="bg-white mx-auto text-center rounded">
+                    <img class="mx-auto" src="image/62e3ce086d0177774dfba088_Feed.png" alt="">
+                    <div class="px-10  pb-10 bg-[#952DFE]">
+                        <h2 class="pt-10 text-[2rem] text-[white] mb-6">User Driven
+                        </h2>
+                        <p class="text-[1.2rem] leading-7 text-[white]">Wallet isn’t a “system.”
+                            You drive your own decision making process. Wallet learns from the user to provide only the
+                            data and tools you need most.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white mx-auto text-center rounded">
+                    <img class="mx-auto" src="image/636b93d40271e59105e8e958_Current (3).png" alt="">
+                    <div class="px-10  pb-[4.4rem] bg-[#F4F4F4]">
+                        <h2 class="pt-10 text-[2rem] text-[black] mb-6">Private
+                        </h2>
+                        <p class="text-[1.2rem] leading-7 text-[black]">BudgetBakers does not sell customer data to 3rd
+                            parties. Ever.
+                            Your data is yours. Our mission is to help you use it to lead a richer life.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white mx-auto text-center rounded">
+                    <img class="mx-auto " style="height: 300px;"
+                        src="image/sustainability_security-and-privacy_privacy_feature-column-carousel05_mo_720x540 (1).avif"
+                        alt="">
+                    <div class="px-10 why-before pb-8 bg-[#354FD8]">
+                        <h2 class="pt-10 text-[2rem] text-[white] mb-6">Advanced
+                        </h2>
+                        <p class="text-[1.2rem] leading-7 text-[white]">Wallet is simply smarter.
+                            We combine best-in-breed AI driven categorization and analytics with a deep set of features
+                            that
+                            are proven to work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#DFF6F4]">
+        <div class="rich-life container px-5 lg:py-6 grid-col-1 lg:px-[7rem] gap-[2rem]  mx-auto grid-rows-2">
+            <h1 class="text-center pb-10 text-[2.5rem] font-semibold pt-5 lg:pt-[3rem] lg:pb-[5rem]">Leading a Richer
+                Life</h1>
+            <div class="container grid grid-col-1 grid-rows-2 gap-9">
+                <div class="lg:flex ">
+                    <div class="image pb-6 lg:flex-1  ">
+                        <img class="rounded-md shadow" src="image/pexels-nina-uhlikova-725255.jpg" alt="">
+                    </div>
+                    <div class="rich-life-content lg:flex-1 text-center lg:text-left lg:pl-10">
+                        <h1 class="mb-6 text-[3rem]">Our mission at Budgetbakers is to help you <span
+                                class="text-[#F0852D]">lead a richer
+                                life.</span>
+                        </h1>
+                        <p class="leading-8 text-[1.2rem] text-[#494444]">Building a picture of all your assets,
+                            monitoring your money
+                            and
+                            controlling your spending
+                            has one purpose, and one purpose only: to lead to a richer life.
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:flex lg:mt-8">
+                    <div class="rich-life-content lg:mt-12 lg:flex-1 text-center lg:text-left lg:pr-8">
+                        <h1 class="mb-6 leading-12 text-[3rem]">A rich life isn’t just about money. <span
+                                class="text-[#F0852D]">It’s about how you use it.</span>
+                        </h1>
+                    </div>
+                    <div class="image pb-6 lg:flex-1 mt-12 lg:pl-6 lg:mt-0 ">
+                        <img class="rounded-md shadow"
+                            src="image/rich-people-life-expensive-lifestyle-persons-vector-44720769.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wallet-help-you mx-auto lg:mx-0 container px-5 lg:px-[7rem] lg:py-[5rem] py-6">
+            <h1 class="text-center text-[3rem] lg:mb-8 font-semibold pb-8">Wallet Helps You:
+            </h1>
+            <div class="container grid grid-rows-4 gap-6 lg:grid-cols-4 lg:grid-rows-1  grid-col-01">
+                <div class="bg-[white] shadow-lg text-center py-6 hover:bg-[#F4A261] transition hover:text-white">
+                    <div class="image mb-4 rounded-full ">
+                        <img class="mx-auto p-3 border-2 border-orange-400" style="max-width:80px;"
+                            src="image/asking.png" alt="">
+                    </div>
+                    <div class="help mt-5">
+                        <h2 class="mb-2 text-[1.4rem] font-semibold">Ask the Questions
+                        </h2>
+                        <p class="text-[1.1rem]">Where does my money go?</p>
+                    </div>
+                </div>
+                <div class="bg-[white] shadow-lg text-center py-6 hover:bg-[#FFD447] transition hover:text-white">
+                    <div class="image mb-4 rounded-full ">
+                        <img class="mx-auto p-3 border-2 border-orange-400" style="max-width:80px;"
+                            src="image/statistics.png" alt="">
+                    </div>
+                    <div class="help mt-5">
+                        <h2 class="mb-2 text-[1.4rem] font-semibold">See the Data
+                        </h2>
+                        <p class="text-[1.1rem]">Unlock key insights.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[white] shadow-lg text-center py-6 hover:bg-[#0A89FF] transition hover:text-white">
+                    <div class="image mb-4 rounded-full ">
+                        <img class="mx-auto p-3 border-2 border-orange-400" style="max-width:80px;"
+                            src="image/clock.png" alt="">
+                    </div>
+                    <div class="help mt-5">
+                        <h2 class="mb-2 text-[1.4rem] font-semibold">Be Efficient
+                        </h2>
+                        <p class="text-[1.1rem]">No missed payments.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[white] shadow-lg text-center py-6 hover:bg-[#FB8500] transition hover:text-white">
+                    <div class="image mb-4 rounded-full ">
+                        <img class="mx-auto p-3 border-2 border-orange-400" style="max-width:80px;"
+                            src="image/analysis (1).png" alt="">
+                    </div>
+                    <div class="help mt-5">
+                        <h2 class="mb-2 text-[1.4rem] font-semibold">Have the Answers
+                        </h2>
+                        <p class="text-[1.1rem]">Anytime, anywhere</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto lg:mx-0 px-3 lg:py-[3rem] py-6 ">
+            <div
+                class="board bg-[#A2D2FF] lg:w-[1050px] lg:gap-8 lg:py-8 lg:px-8 mx-auto rounded-lg lg:grid grid-rows-1 grid-cols-2 shadow-lg">
+                <div class="board-text px-5 py-6 ">
+                    <div class="board-logo mb-6">
+                        <img style="max-width: 150px;" src="image/Board-logo-primary.svg" alt="">
+                    </div>
+                    <h1 class="text-[2.5rem] mb-6 font-semibold">Board: Wallet for Business</h1>
+                    <h3 class="text-[1.7rem] font-semibold text-[#3E3C3C] mb-6">Looking for Wallet’s powerful features
+                        and
+                        more
+                        to run a
+                        small business?
+                    </h3>
+                    <p class="text-[1.2rem]">That’s why we invented Board: a powerful small business finance manager
+                        that goes beyond Point of
+                        Sale, to offer you a 360° view of your business finances.</p>
+                </div>
+                <div class="board-background">
+                    <div class="image">
+                        <img src="image/board-image-2-e1649077143557.png" alt="">
+                    </div>
+                </div>
+                <div class="button col-end-3 lg:items-end pb-6">
+                    <a class="bg-[#F4A261]  text-[1.2rem] w-[8rem] rounded-full mx-auto block text-center px-5 py-3 shadow text-white"
+                        href="#"><button>Try
+                            Board</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#DFF6F4]">
+        <div class="container  mx-auto px-5 py-10">
+            <div class="social-media flex mb-5">
+                <ul class="mx-auto flex gap-5">
+                    <li><a class="text-[1.4rem] px-[1.3rem] py-3 rounded-full border-2 border-indigo-600 text-[blue]"
+                            href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li><a class="text-[1.3rem] px-4 py-3 rounded-full border-2 border-indigo-600 text-[blue]"
+                            href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li><a class="text-[1.3rem] px-4 py-3 rounded-full border-2 border-indigo-600 text-[blue]"
+                            href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li><a class="text-[1.3rem] px-4 py-3 rounded-full border-2 border-indigo-600 text-[blue]"
+                            href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="store pt-5 lg:mx-auto lg:flex lg:gap-3 lg:justify-center">
+                <a class="mx-autu lg:mx-0" href="#">
+                    <img class="mx-auto lg:mx-0 mb-7 lg:mb-0" style="max-width: 160px;" src="image/google-play.svg"
+                        alt="">
+                </a>
+                <a href="#">
+                    <img class="mx-auto lg:mx-0 mb-7 lg:mb-0" style="max-width: 150px;" src="image/app-store.svg"
+                        alt="">
+                </a>
+            </div>
+            <div class="copyright mx-auto text-center text-[0.9rem] pt-6 lg:flex lg:justify-center leading-8">
+                <p>Copyright 2022 BudgetBakers s.r.o | </p>
+                <span>All Rights Reserved |</span>
+                <a href="#">Privacy Policy |</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function onTogglemenu(togg) {
+            const menu = document.querySelector('.menu');
+            togg.name = togg.name === 'menu' ? 'close' : 'menu';
+            menu.classList.toggle('top-[3.6em]')
+        }
+    </script>
+</body>
+
+</html>
